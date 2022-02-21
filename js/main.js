@@ -55,10 +55,15 @@ function simulador_de_credito() {
     case 1:
       alert("Bienvenido al Simulador de Credito " + credito_tipo1);
         for (i = 0; i < carros.length; i++) {
-          temp = carros[i] + "\n";
+          temp = i+1 + ": " + carros[i] + "\n";
           nombreCarros += temp;
         };
-      prompt(`Cual Carro deseas: \n${nombreCarros} `)
+      let opcion_elejida = prompt(`Cual Carro deseas: \n${nombreCarros} `);
+
+      switch (opcion_elejida) {
+        case 1:
+          
+      }
 
       break;
 
