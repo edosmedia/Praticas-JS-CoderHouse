@@ -1,4 +1,5 @@
-@import url('/css/bootstrap/bootstrap.min.css');
+@import url('https://edosmedia.github.io/tareas-js/css/bootstrap/bootstrap.min.css');
+@import url('css/bootstrap/bootstrap.min.css');
 
 .card img {
   height:150px
