@@ -39,6 +39,11 @@ function desafio_1() {
   }
 }
 
+      function calculo_credito(n) {
+        resultado = (n * 0.05) / 36 + "coutas";
+        return resultado;
+      };
+
 function simulador_de_credito() {
   //  Variable de Tipo de Creditos
   let credito_tipo1 = "Vehiculo";
@@ -46,7 +51,24 @@ function simulador_de_credito() {
   let credito_tipo3 = "Credito de Consumo";
 
   // Vehiculos
-  let carros = ["Ford Fusion", "Nissan Versa", "Chevrolet Onix"];
+  // let carros = ["Ford Fusion : 50.000.000", "Nissan Versa : 20.000.000 ", "Chevrolet Onix : 13.000.000"];
+   let carros = [
+     {
+       modelo: "Ford Fusion",
+       valor: "50.000.000",
+     },
+     {
+       modelo: "Nissan Versa",
+       valor: "20.000.000",
+     },
+     {
+       modelo: "Chevrolet Onix",
+       valor: "13.000.000",
+     },
+   ];
+
+  let precios = [50000000, 20000000, 13000000];
+
   let nombreCarros = "";
 
   const opcion_credito = parseInt(prompt("Atención Elejir una de la Opciones del tipo de Credito: \n1 : " + credito_tipo1 + "\n2 : " + credito_tipo2 + "\n3 : " + credito_tipo3));
@@ -54,18 +76,45 @@ function simulador_de_credito() {
   switch (opcion_credito) {
     case 1:
       alert("Bienvenido al Simulador de Credito " + credito_tipo1);
-        for (i = 0; i < carros.length; i++) {
-          temp = i+1 + ": " + carros[i] + "\n";
-          nombreCarros += temp;
-        };
-      let opcion_elejida = prompt(`Cual Carro deseas: \n${nombreCarros} `);
 
-      switch (opcion_elejida) {
-        case 1:
-          
+      function calculo_credito(n) {
+        resultado = ((n * 0.05) / 36).toFixed(0) + " En 36 Coutas" + "\n" + ","
+                    ((n * 0.10) / 48).toFixed(0) + " En 48 Coutas" + "\n" + ","
+                    ((n * 0.15) / 60).toFixed(0) + " En 60 Coutas" + "\n";
+        return resultado;
       }
 
-      break;
+      // for (i = 0; i < carros.length; i++) {
+      //   temp = i+1 + ": " + carros[i] + "\n";
+      //   nombreCarros += temp;
+      // };
+
+      // for (var i in carros) {
+      //   temp = i + ") " + carros[i].modelo + " : " + carros[i].valor + "\n";
+      //   nombreCarros += temp;
+      // }
+
+      // carros.forEach(carros.modelo, carros.valor, index); ()=> {
+      //     console.log(`${modelo} ${valor}`)
+      // };
+
+      carros.forEach(function (valor, index) {
+        temp = `${index + 1}- ${valor.modelo} El Precio Es: ${valor.valor} \n`;
+        nombreCarros += temp;
+      });
+
+
+      elecion = parseInt(prompt(`Cual Carro deseas: \n${nombreCarros} `));
+
+        if(elecion = 1 ) {
+            alert(calculo_credito(precios[0]));
+        }else if(elecion = 2){
+            alert(calculo_credito(precios[1]));
+        }else if(elecion = 3){
+            alert(calculo_credito(precios[2]));
+        }else {
+          alert("La elecion no es valida");
+        };
 
     case 2:
       alert("Bienvenido al Simulador de Credito " + credito_tipo2);
