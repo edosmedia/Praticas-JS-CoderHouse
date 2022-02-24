@@ -39,6 +39,11 @@ function desafio_1() {
   }
 }
 
+
+
+// Desafio 2
+
+
       function calculo_credito(n) {
         resultado = (n * 0.05) / 36 + "coutas";
         return resultado;
@@ -78,9 +83,9 @@ function simulador_de_credito() {
       alert("Bienvenido al Simulador de Credito " + credito_tipo1);
 
       function calculo_credito(n) {
-        resultado = ((n * 0.05) / 36).toFixed(0) + " En 36 Coutas" + "\n" + ","
-                    ((n * 0.10) / 48).toFixed(0) + " En 48 Coutas" + "\n" + ","
-                    ((n * 0.15) / 60).toFixed(0) + " En 60 Coutas" + "\n";
+        resultado = ((n * 1.05) / 36).toFixed(0) + " En 36 Coutas \n"+
+                    ((n * 1.10) / 48).toFixed(0) + " En 48 Coutas \n"+
+                    ((n * 1.15) / 60).toFixed(0) + " En 60 Coutas \n";
         return resultado;
       }
 
@@ -103,19 +108,18 @@ function simulador_de_credito() {
         nombreCarros += temp;
       });
 
-
       elecion = parseInt(prompt(`Cual Carro deseas: \n${nombreCarros} `));
 
-        if(elecion = 1 ) {
+        if(elecion == 1) {
             alert(calculo_credito(precios[0]));
-        }else if(elecion = 2){
+        }else if(elecion == 2){
             alert(calculo_credito(precios[1]));
-        }else if(elecion = 3){
+        }else if(elecion == 3){
             alert(calculo_credito(precios[2]));
         }else {
           alert("La elecion no es valida");
         };
-
+       break;
     case 2:
       alert("Bienvenido al Simulador de Credito " + credito_tipo2);
       alert("Este Momento Simulador de Credito " + credito_tipo2 + "no esta disponible disculpa molestia ocasionada.");
