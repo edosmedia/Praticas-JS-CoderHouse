@@ -39,15 +39,12 @@ function desafio_1() {
   }
 }
 
-
-
 // Desafio 2
 
-
-      function calculo_credito(n) {
-        resultado = (n * 0.05) / 36 + "coutas";
-        return resultado;
-      };
+function calculo_credito(n) {
+  resultado = (n * 0.05) / 36 + "coutas";
+  return resultado;
+}
 
 function simulador_de_credito() {
   //  Variable de Tipo de Creditos
@@ -57,20 +54,20 @@ function simulador_de_credito() {
 
   // Vehiculos
   // let carros = ["Ford Fusion : 50.000.000", "Nissan Versa : 20.000.000 ", "Chevrolet Onix : 13.000.000"];
-   let carros = [
-     {
-       modelo: "Ford Fusion",
-       valor: "50.000.000",
-     },
-     {
-       modelo: "Nissan Versa",
-       valor: "20.000.000",
-     },
-     {
-       modelo: "Chevrolet Onix",
-       valor: "13.000.000",
-     },
-   ];
+  let carros = [
+    {
+      modelo: "Ford Fusion",
+      valor: "50.000.000",
+    },
+    {
+      modelo: "Nissan Versa",
+      valor: "20.000.000",
+    },
+    {
+      modelo: "Chevrolet Onix",
+      valor: "13.000.000",
+    },
+  ];
 
   let precios = [50000000, 20000000, 13000000];
 
@@ -83,9 +80,7 @@ function simulador_de_credito() {
       alert("Bienvenido al Simulador de Credito " + credito_tipo1);
 
       function calculo_credito(n) {
-        resultado = ((n * 1.05) / 36).toFixed(0) + " En 36 Coutas \n"+
-                    ((n * 1.10) / 48).toFixed(0) + " En 48 Coutas \n"+
-                    ((n * 1.15) / 60).toFixed(0) + " En 60 Coutas \n";
+        resultado = ((n * 1.05) / 36).toFixed(0) + " En 36 Coutas \n" + ((n * 1.1) / 48).toFixed(0) + " En 48 Coutas \n" + ((n * 1.15) / 60).toFixed(0) + " En 60 Coutas \n";
         return resultado;
       }
 
@@ -110,16 +105,16 @@ function simulador_de_credito() {
 
       elecion = parseInt(prompt(`Cual Carro deseas: \n${nombreCarros} `));
 
-        if(elecion == 1) {
-            alert(calculo_credito(precios[0]));
-        }else if(elecion == 2){
-            alert(calculo_credito(precios[1]));
-        }else if(elecion == 3){
-            alert(calculo_credito(precios[2]));
-        }else {
-          alert("La elecion no es valida");
-        };
-       break;
+      if (elecion == 1) {
+        alert(calculo_credito(precios[0]));
+      } else if (elecion == 2) {
+        alert(calculo_credito(precios[1]));
+      } else if (elecion == 3) {
+        alert(calculo_credito(precios[2]));
+      } else {
+        alert("La elecion no es valida");
+      }
+      break;
     case 2:
       alert("Bienvenido al Simulador de Credito " + credito_tipo2);
       alert("Este Momento Simulador de Credito " + credito_tipo2 + "no esta disponible disculpa molestia ocasionada.");
@@ -135,4 +130,46 @@ function simulador_de_credito() {
       return simulador_de_credito;
     }
   }
+}
+
+// Desafio 3
+
+function metodos_array() {
+    alert("Todo sale en la consola")
+
+  const personajes = ["goku", "vegeta", "gohan", "trunk", "broly", "frezzer"];
+
+  numero = [1,2,3,4,5]
+ 
+  personajes.push("krilin"); // Agregar al Final del Array
+  console.log(`Agregado Krilin con Push  ${personajes}`);
+ 
+  personajes.pop(); // Eliminar al Final del Array
+  console.log(`Eliminar Krilin con pop  ${personajes}`);
+  
+  personajes.shift(); // Eliminar al Principio del Array
+  console.log(`Eliminar al principio del array con shift del array ${personajes}`);
+ 
+  personajes.unshift("goku"); // Agrega al Principio del Array
+  console.log(`Agrega al principio del array con unshift del array ${personajes}`);
+
+  personajes.concat("Picolo"); // Agrega al Final  concadenado del Array
+  console.log(`Agrega al Final concadenado del array con concat del array ${personajes}`);
+
+  console.log("Con JOIN " + personajes.join('---------'));
+  
+  conteo = personajes.length;
+
+  console.log("Cuanto personajes con length " + conteo);
+
+
+  console.log("Metodo slice " + personajes.slice(2));
+
+   console.log("Metodo IndexOf Buscador por array ubicado en " + personajes.indexOf('trunk'));
+
+  console.log("Metodo includes Buscador por array si trunk existe?  " + personajes.includes("trunk"));
+
+  console.log("Metodo reverse todo ordena todo arrevez los array " + personajes.reverse);
+  
+
 }
