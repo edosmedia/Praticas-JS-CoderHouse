@@ -245,3 +245,9 @@ function simulador_de_credito_pe1() {
   }
 }
 // END Desafio Pre-Entrega
+
+
+// Desafio Complemnetario Class 8
+
+
+// END Desafio Complemnetario Class 8
