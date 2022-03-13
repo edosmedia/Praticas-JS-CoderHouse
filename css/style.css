@@ -81,3 +81,16 @@ body {
 .contenedor-main-cotizacion {
   display: flex;
 }
+
+@media (max-width: 768px) {
+  .contenedor-main-cotizacion {
+  flex-direction: column;
+};
+.input-campos {
+  border-radius:  none !important;
+  -webkit-border-radius:  none !important;
+  -moz-border-radius:  none !important;
+  -ms-border-radius:  none !important;
+  -o-border-radius:  none !important;
+};
+}
