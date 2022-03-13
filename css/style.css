@@ -29,4 +29,55 @@ body {
 
 .accion_Personaje  input[type="text"] {
   margin: 0 10px;
+
+}
+
+.div-form-cot {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-form-cot label {
+ margin-right: 5%;
+ width: 30%;
+}
+.div-form-cot input[type="text"], input[type="number"] {
+   width: 60%;
+}
+
+.div-form-cot input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+ -moz-appearance: none;
+ -ms-appearance: none;
+ -o-appearance: none;
+   margin: 0; 
+
+}
+
+.div-form-cot input[type="number"] {
+  -moz-appearance:textfield;
+}
+
+.input-campos {
+ border: solid .0625rem white;
+ border-radius: 10px 0px 0px 10px;
+ -webkit-border-radius: 10px 0px 0px 10px;
+ -moz-border-radius: 10px 0px 0px 10px;
+ -ms-border-radius: 10px 0px 0px 10px;
+ -o-border-radius: 10px 0px 0px 10px;
+ padding: 20px
+}
+
+.resultados {
+  border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -ms-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+  padding: 20px;
+}
+.contenedor-main-cotizacion {
+  display: flex;
 }

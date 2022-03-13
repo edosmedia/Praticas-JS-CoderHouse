@@ -251,3 +251,13 @@ function simulador_de_credito_pe1() {
 
 
 // END Desafio Complemnetario Class 8
+
+export function calculo_credito(montocredito, coutas) {
+  let interes = 3 / 100;
+  let resultado = (montocredito * (interes * Math.pow(1 + interes, coutas))) / (Math.pow(1 + interes, coutas) - 1);
+  return `<b>$ ${resultado.toFixed(0)} </b> en ${coutas} Coutas`;
+}
+export function validate() {
+  var element = document.getElementById('nombre');
+  element.value = element.value.replace(/[^a-zA-Z]+/, '');
+};
