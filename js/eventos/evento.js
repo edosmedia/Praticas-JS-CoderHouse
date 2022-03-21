@@ -1,4 +1,3 @@
-// import * as main from '../main.js';
 const input_nombre = document.getElementById("nombre");
 const input_montocredito = document.getElementById("monto_credito");
 const input_coutas = document.getElementById("coutas");
@@ -8,13 +7,13 @@ const mensaje = document.getElementById("mensaje");
 
 function validate() {
   var element = document.getElementById('nombre');
-  element.value = element.value.replace(/[^a-zA-Z]+/, '');
+  element.value = element.value.replace(/[^a-zA-Z]+[^a-zA-Z]/, "");
 };
 
 function calculo_credito_carro(montocredito, coutas) {
   let interes = 3 / 100;
   let resultado = (montocredito * (interes * Math.pow(1 + interes, coutas))) / (Math.pow(1 + interes, coutas) - 1);
-  return `<b>$ ${resultado.toFixed(0)} </b> en ${coutas} Coutas`;
+  return `<b>$ ${resultado.toFixed(0)} </b> en ${coutas} Coutas`; 
 }
 
 boton.addEventListener("click", () => {
