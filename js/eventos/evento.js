@@ -17,7 +17,7 @@ function calculo_credito_carro(montocredito, coutas) {
 }
 
 boton.addEventListener("click", () => {
- if (input_montocredito.value == "" | input_coutas.value == "" | input_nombre.value == "" ) {
+ if (input_montocredito.value == "" || input_coutas.value == "" || input_nombre.value == "" ) {
    mensaje.innerHTML = `<div id="alerta" class="alert alert-danger d-block" role="alert">
                         Tiene que llenar todos los campos
                         </div>`;
