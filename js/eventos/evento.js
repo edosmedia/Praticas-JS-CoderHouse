@@ -38,3 +38,104 @@ boton.addEventListener("click", () => {
                          }
  }
   });
+
+
+
+  // let btnGirarIzqMetodologia = document.getElementById("btnGirarIzqMetodologia");
+  // let btnGirarDerMetodologia = document.getElementById("btnGirarDerMetodologia");
+  // let ruedaSVGMetodologia = document.getElementById("ruedaSVGMetodologia");
+  // let metodologiaTextTitulo = document.getElementById("metodologiaTextTitulo");
+  // let metodologiaTextDescripcion = document.getElementById("metodologiaTextDescripcion");
+  // let divPosition = document.getElementById("divPosition");
+
+  // let anguloActual = 0;
+  // let pos = 0;
+
+  // const metodologiaINVD = {
+  //   branding: {
+  //     suma: 48,
+  //     resta: 50,
+  //     tituloSuma: "investigacion",
+  //     tituloResta: "estrategia",
+  //     titulo: "Branding",
+  //     descripcion: "La creación de una marca es el factor más importante en el posicionamiento, es el factor visual y emocional con el cual te identificaran tus clientes, debes elegir una línea grafica que represente tu marca, tus valores, tu experiencia y lo que deseas transmitir como propuesta de valor diferencial en el mercado. A veces crear una marca disruptiva puede ser el inicio de un gran viaje!.",
+  //   },
+  //   estrategia: {
+  //     suma: 50,
+  //     resta: 49,
+  //     tituloSuma: "branding",
+  //     tituloResta: "paginaWeb",
+  //     titulo: "Estratégia",
+  //         descripcion: "Este proceso buscará que tu marca o empresa se centre en los recursos que tiene a la mano y los utilicé de la mejor manera posible. Nos enfocamos en garantizar que el objetivo se cumpla, mediante la implementación de las conocidas 4P: producto, precio, plaza y promoción.",
+  //   },
+  //   investigacion: {
+  //     suma: 47,
+  //     resta: 48,
+  //     tituloSuma: "conversion",
+  //     tituloResta: "branding",
+  //     titulo: "Investigación",
+  //     descripcion: "Desarrollar un buen plan de investigación permitirá estar bien preparado para cubrir los demás aspectos de tu plan de marketing. La función principal es conectar directamente al consumidor o al cliente con el vendedor, mediante la información. Esta ayudará a identificar y definir las oportunidades o problemas del marketing de tu marca.",
+  //   },
+  //   conversion: {
+  //     suma: 50,
+  //     resta: 47,
+  //     tituloSuma: "ecommerce",
+  //     tituloResta: "investigacion",
+  //     titulo: "Conversión",
+  //     descripcion: "La estrategia digital que planteamos ayudará a definir cuál es el objetivo de conversión a conseguir, para ello las acciones de los clientes en tu página web deberán estar alineadas con tus objetivos. Se logra midiendo la tasa de conversiones, optimizando resultados, definiendo los indicadores, pero siempre con el fin de establecer objetivos claros.",
+  //   },
+  //   ecommerce: {
+  //     suma: 52,
+  //     resta: 50,
+  //     tituloSuma: "contenido",
+  //     tituloResta: "conversion",
+  //     titulo: "E-commerce",
+  //     descripcion: "Millones de clientes optan actualmente por realizar sus compras de manera online. Es por esto que el e-commerce hace crecer tu negocio desarrollando acciones de mercado, ventas, gestión de cartera y de negocio, además de una buena gestión logística. Sin duda, es una fuente de ingresos atractiva.",
+  //   },
+  //   paginaWeb: {
+  //     suma: 49,
+  //     resta: 64,
+  //     tituloSuma: "estrategia",
+  //     tituloResta: "contenido",
+  //     titulo: "Página Web",
+  //     descripcion: "Para lograr la tan anhelada conexión entre marca y cliente, es necesario tener una página web porque esta será el instrumento para el marketing de tu negocio; es decir, darle visibilidad online a tu marca y ofrecer a través de esa vía tus productos o servicios a mayor cantidad de personas.",
+  //   },
+  //   contenido: {
+  //     suma: 64,
+  //     resta: 52,
+  //     tituloSuma: "paginaWeb",
+  //     tituloResta: "ecommerce",
+  //     titulo: "Contenido",
+  //     descripcion: "Lograr captar la atención de tus clientes es vital para el crecimiento de tu marca. Un buen contenido en sus múltiples facetas, ayudará a lograr la conexión necesaria entre la marca y tus clientes. Esto, ayudará a reforzar la visibilidad y la autoridad de la marca posicionándola como la principal referencia para el cliente.",
+  //   },
+  // };
+
+  // const girarDerMetodologia = () => {
+  //   posActual = divPosition.dataset.pos;
+  //   proximaPos = anguloActual + metodologiaINVD[posActual].suma;
+  //   divPosition.dataset.pos = metodologiaINVD[posActual].tituloSuma;
+  //   ruedaSVGMetodologia.style.transform = `rotate(${proximaPos}deg)`;
+  //   metodologiaTextTitulo.innerHTML = metodologiaINVD[divPosition.dataset.pos].titulo;
+  //   metodologiaTextDescripcion.innerHTML = metodologiaINVD[divPosition.dataset.pos].descripcion;
+  //   anguloActual = proximaPos;
+  //   /*
+  //    */
+  // };
+  // const girarIzqMetodologia = () => {
+  //   posActual = divPosition.dataset.pos;
+  //   proximaPos = anguloActual - metodologiaINVD[posActual].resta;
+  //   divPosition.dataset.pos = metodologiaINVD[posActual].tituloResta;
+  //   ruedaSVGMetodologia.style.transform = `rotate(${proximaPos}deg)`;
+  //   metodologiaTextTitulo.innerHTML = metodologiaINVD[divPosition.dataset.pos].titulo;
+  //   metodologiaTextDescripcion.innerHTML = metodologiaINVD[divPosition.dataset.pos].descripcion;
+  //   anguloActual = proximaPos;
+  //   /*
+  //    */
+  // };
+  // btnGirarIzqMetodologia.addEventListener("click", () => {
+  //   girarIzqMetodologia();
+  // });
+
+  // btnGirarDerMetodologia.addEventListener("click", () => {
+  //   girarDerMetodologia();
+  // });
