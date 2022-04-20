@@ -57,6 +57,12 @@ body {
 
 }
 
+
+.form-control {
+  background-color: #fff !important;
+}
+
+
 .div-form-cot input[type="number"] {
   -moz-appearance:textfield;
 }

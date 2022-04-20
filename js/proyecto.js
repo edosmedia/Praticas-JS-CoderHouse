@@ -5,7 +5,7 @@ const input_coutas = document.getElementById("coutas");
 const boton = document.getElementById("simulacion");
 const resultado = document.getElementById("resultado");
 const mensaje = document.getElementById("mensaje");
-
+const inputall = document.getElementsByTagName('input');
 
 
 // END Variable del DOM
@@ -33,6 +33,27 @@ function formatonumerodolar(valor) {
   const numberFormat1 = new Intl.NumberFormat("en-US", moneda);
   return numberFormat1.format(valor);
 }
+
+function errorcampos(e, mensajes) {
+  for (i = 0; i < e.length; i++) {
+    // console.log(inputall[i]);
+    e[i].classList.toggle("is-invalid"); 
+  }
+    // e.classList.toggle("is-invalid");
+  mensaje.innerHTML += `<div id="alerta" class="alert alert-danger d-block" role="alert">
+                        ${mensajes}
+                        </div`;
+  // console.log("ejecutando");
+}
+
+function clearmensaje() {
+    for (i = 0; i < inputall.length; i++) {
+      // console.log(inputall[i]);
+      inputall[i].classList.remove("is-invalid");
+    }
+  mensaje.innerHTML = "";
+  // inputall.classList.remove('hide');
+}
 // END Funciones
 
 // API 
@@ -51,11 +72,18 @@ fetch("https://mindicador.cl/api")
 
 // EVENTO
 boton.addEventListener("click", () => {
+  clearmensaje();
   if (input_montocredito.value == "" || input_coutas.value == "" || input_nombre.value == "") {
-    mensaje.innerHTML = `<div id="alerta" class="alert alert-danger d-block" role="alert">
-                        Tiene que llenar todos los campos
-                        </div>`;
+    errorcampos(inputall, "Tiene que llenar todos los campos");
+  }if (input_montocredito.value < 100000) {
+    errorcampos(input_montocredito, "El monto del credito tiene que ser superior a 100.000");
+  }if (input_coutas.value < 12) {
+    errorcampos(input_coutas, "La cantidad de Coutas tiene que ser superior a 12");
   } else {
+      //  let msj_erro = document.getElementById("alerta");
+      //  if (msj_erro) {
+      //    msj_erro.className = "d-none";
+      //  }
     resultado_op = calculo_credito_carro(input_montocredito.value, input_coutas.value);
 
     resultadouf = resultado_op / valorufActual;
@@ -70,10 +98,7 @@ boton.addEventListener("click", () => {
                         <div class="my-4" style="font-size: 1.5rem" id="uf"> Monto del Credito Total en Dolares:  ${formatonumerodolar(resultadodolar.toFixed(0))} </div>
                         </div>
                         </div>`;
-    let msj_erro = document.getElementById("alerta");
-    if (msj_erro) {
-      msj_erro.className = "d-none";
-    }
+
   }
 });
 
